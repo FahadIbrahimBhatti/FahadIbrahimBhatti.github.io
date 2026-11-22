@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" width="560" height="420">
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0v24" fill="none" stroke="#8da0a3" stroke-opacity=".19"/>
+      <circle cx="0" cy="0" r="1.1" fill="#7a8c90" opacity=".5"/>
+    </pattern>
+    <pattern id="board-grid" width="9" height="9" patternUnits="userSpaceOnUse">
+      <path d="M9 0H0v9" fill="none" stroke="#748b8d" opacity=".37" stroke-width=".55"/>
+    </pattern>
+    <pattern id="metal-lines" width="5" height="5" patternUnits="userSpaceOnUse">
+      <path d="M0 0h5" stroke="#aeb9b7" opacity=".25" stroke-width=".65"/>
+    </pattern>
+    <linearGradient id="board-top" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#293a3a"/>
+      <stop offset="1" stop-color="#142124"/>
+    </linearGradient>
+    <linearGradient id="shell-top" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#64716f"/>
+      <stop offset=".5" stop-color="#3a494c"/>
+      <stop offset="1" stop-color="#243136"/>
+    </linearGradient>
+    <linearGradient id="silicon-top" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#aeb4a9"/>
+      <stop offset=".2" stop-color="#667574"/>
+      <stop offset="1" stop-color="#344249"/>
+    </linearGradient>
+    <radialGradient id="field">
+      <stop stop-color="#37464b"/>
+      <stop offset="1" stop-color="#1a2228"/>
+    </radialGradient>
+    <g id="trace-bank" fill="none" stroke="#748e8b" stroke-width="1.15">
+      <path d="M-110 91v8l9 9V121"/><circle cx="-101" cy="121" r="2.4"/>
+      <path d="M-97 94v8l9 9V118"/><circle cx="-88" cy="118" r="2.4"/>
+      <path d="M-84 97v8l9 9V115"/><circle cx="-75" cy="115" r="2.4"/>
+      <path d="M-71 91v8l9 9V121"/><circle cx="-62" cy="121" r="2.4"/>
+      <path d="M-58 94v8l9 9V118"/><circle cx="-49" cy="118" r="2.4"/>
+      <path d="M-45 97v8l9 9V115"/><circle cx="-36" cy="115" r="2.4"/>
+      <path d="M-32 91v8l9 9V121"/><circle cx="-23" cy="121" r="2.4"/>
+      <path d="M-19 94v8l9 9V118"/><circle cx="-10" cy="118" r="2.4"/>
+    </g>
+  </defs>
+
+  <rect x="5" y="7" width="550" height="398" fill="url(#field)" opacity=".9"/>
+  <rect x="5" y="7" width="550" height="398" fill="url(#grid)"/>
+  <rect x="14" y="15" width="532" height="382" fill="none" stroke="#65767b" stroke-opacity=".5" stroke-dasharray="2 5"/>
+  <path d="M25 47V26h22m466 0h22v21M25 367v20h22m466 0h22v-20M280 26v14m-7-7h14m-14 344h14m-7-7v14M25 206h16m-8-8v16m487-8h15m-8-8v16" fill="none" stroke="#70858a" stroke-opacity=".85"/>
+  <path d="M54 187h30l44-39h44m284 85h25l22 22h23M56 267h25l27 24h20m368 33h29" fill="none" stroke="#70858a" stroke-opacity=".5" stroke-width="1"/>
+  <ellipse cx="280" cy="249" rx="214" ry="128" fill="none" stroke="#789196" stroke-opacity=".45" stroke-dasharray="2 6"/>
+  <ellipse cx="280" cy="249" rx="195" ry="116" fill="none" stroke="#65777b" stroke-opacity=".32"/>
+
+  <path d="M62 252 280 354 498 252v15L280 370 62 267z" fill="#141d21" stroke="#56686b"/>
+  <path d="M62 260 280 363 498 260M280 354v16" fill="none" stroke="#627477" stroke-opacity=".74"/>
+  <g transform="matrix(.88 .42 -.88 .42 280 252)">
+    <path d="M-120 -128H120L128 -120V120L120 128H-120L-128 120V-120Z" fill="url(#board-top)" stroke="#859797" stroke-width="1.5"/>
+    <path d="M-120 -128H120L128 -120V120L120 128H-120L-128 120V-120Z" fill="url(#board-grid)"/>
+    <path d="M-116 -122H116L122 -116V116L116 122H-116L-122 116V-116Z" fill="none" stroke="#b0a485" stroke-opacity=".5" stroke-width="1"/>
+    <use href="#trace-bank"/>
+    <use href="#trace-bank" transform="rotate(90)"/>
+    <use href="#trace-bank" transform="rotate(180)"/>
+    <use href="#trace-bank" transform="rotate(270)"/>
+    <path d="M-99 91v18l13 11h15m170-29v20l-10 9H72M91-105h19v20m-20-20h-5" fill="none" stroke="#c88a59" stroke-width="1.2"/>
+    <g fill="#142024" stroke="#9aa9a2" stroke-width="1.5">
+      <circle cx="-112" cy="-112" r="6"/><circle cx="112" cy="-112" r="6"/>
+      <circle cx="-112" cy="112" r="6"/><circle cx="112" cy="112" r="6"/>
+    </g>
+    <path d="M-78 -83H78L83 -78V78L78 83H-78L-83 78V-78Z" fill="#172528" stroke="#758b8a" stroke-dasharray="3 3"/>
+    <path d="M-67 -72H67L72 -67V67L67 72H-67L-72 67V-67Z" fill="none" stroke="#87998c" stroke-width="1"/>
+  </g>
+
+  <path d="M136 178v56m288-56v56M280 246v59m-1-191v43" fill="none" stroke="#b4a388" stroke-opacity=".7" stroke-dasharray="3 6"/>
+  <path d="M137 184 280 251 423 184v22L280 274 137 206z" fill="#253035" stroke="#788487" stroke-linejoin="round"/>
+  <path d="M139 195 280 262 421 195m-141 57v22" fill="none" stroke="#566166"/>
+  <path d="m143 207 136 65 137-65" fill="none" stroke="#c77f49" stroke-opacity=".75" stroke-width="1.3"/>
+  <g transform="matrix(.88 .42 -.88 .42 280 183)">
+    <path d="M-78 -87H78L87 -78V78L78 87H-78L-87 78V-78Z" fill="url(#shell-top)" stroke="#9aa7a2" stroke-width="1.8"/>
+    <path d="M-78 -87H78L87 -78V78L78 87H-78L-87 78V-78Z" fill="url(#metal-lines)"/>
+    <path d="M-71 -79H71L79 -71V71L71 79H-71L-79 71V-71Z" fill="none" stroke="#1a2529" stroke-width="1.3"/>
+    <path d="M-60 -67H60L67 -60V60L60 67H-60L-67 60V-60Z" fill="#2a393d" stroke="#a47f5f" stroke-width="1.15"/>
+    <path d="M-55 -62H55L62 -55V55L55 62H-55L-62 55V-55Z" fill="url(#board-grid)" stroke="#75898b" stroke-width=".9"/>
+    <g stroke-width="1.7" stroke-linecap="square">
+    <path d="M-63.0 -84v13" stroke="#c79465" transform="rotate(0)"/>
+    <path d="M-54.6 -84v13" stroke="#c79465" transform="rotate(0)"/>
+    <path d="M-46.2 -84v13" stroke="#c79465" transform="rotate(0)"/>
+    <path d="M-37.8 -84v13" stroke="#c79465" transform="rotate(0)"/>
+    <path d="M-29.4 -84v13" stroke="#c79465" transform="rotate(0)"/>
+    <path d="M-21.0 -84v13" stroke="#c79465" transform="rotate(0)"/>
+    <path d="M-12.6 -84v13" stroke="#c79465" transform="rotate(0)"/>
+    <path d="M-4.2 -84v13" stroke="#c79465" transform="rotate(0)"/>
+    <path d="M4.2 -84v13" stroke="#c79465" transform="rotate(0)"/>
+    <path d="M12.6 -84v13" stroke="#c79465" transform="rotate(0)"/>
+    <path d="M21.0 -84v13" stroke="#c79465" transform="rotate(0)"/>
+    <path d="M29.4 -84v13" stroke="#c79465" transform="rotate(0)"/>
+    <path d="M37.8 -84v13" stroke="#c79465" transform="rotate(0)"/>
+    <path d="M46.2 -84v13" stroke="#c79465" transform="rotate(0)"/>
+    <path d="M54.6 -84v13" stroke="#c79465" transform="rotate(0)"/>
+    <path d="M63.0 -84v13" stroke="#c79465" transform="rotate(0)"/>
+    <path d="M-63.0 -84v13" stroke="#c79465" transform="rotate(90)"/>
+    <path d="M-54.6 -84v13" stroke="#c79465" transform="rotate(90)"/>
+    <path d="M-46.2 -84v13" stroke="#c79465" transform="rotate(90)"/>
+    <path d="M-37.8 -84v13" stroke="#c79465" transform="rotate(90)"/>
+    <path d="M-29.4 -84v13" stroke="#c79465" transform="rotate(90)"/>
+    <path d="M-21.0 -84v13" stroke="#c79465" transform="rotate(90)"/>
+    <path d="M-12.6 -84v13" stroke="#c79465" transform="rotate(90)"/>
+    <path d="M-4.2 -84v13" stroke="#c79465" transform="rotate(90)"/>
+    <path d="M4.2 -84v13" stroke="#c79465" transform="rotate(90)"/>
+    <path d="M12.6 -84v13" stroke="#c79465" transform="rotate(90)"/>
+    <path d="M21.0 -84v13" stroke="#c79465" transform="rotate(90)"/>
+    <path d="M29.4 -84v13" stroke="#c79465" transform="rotate(90)"/>
+    <path d="M37.8 -84v13" stroke="#c79465" transform="rotate(90)"/>
+    <path d="M46.2 -84v13" stroke="#c79465" transform="rotate(90)"/>
+    <path d="M54.6 -84v13" stroke="#c79465" transform="rotate(90)"/>
+    <path d="M63.0 -84v13" stroke="#c79465" transform="rotate(90)"/>
+    <path d="M-63.0 -84v13" stroke="#c79465" transform="rotate(180)"/>
+    <path d="M-54.6 -84v13" stroke="#c79465" transform="rotate(180)"/>
+    <path d="M-46.2 -84v13" stroke="#c79465" transform="rotate(180)"/>
+    <path d="M-37.8 -84v13" stroke="#c79465" transform="rotate(180)"/>
+    <path d="M-29.4 -84v13" stroke="#c79465" transform="rotate(180)"/>
+    <path d="M-21.0 -84v13" stroke="#c79465" transform="rotate(180)"/>
+    <path d="M-12.6 -84v13" stroke="#c79465" transform="rotate(180)"/>
+    <path d="M-4.2 -84v13" stroke="#c79465" transform="rotate(180)"/>
+    <path d="M4.2 -84v13" stroke="#c79465" transform="rotate(180)"/>
+    <path d="M12.6 -84v13" stroke="#c79465" transform="rotate(180)"/>
+    <path d="M21.0 -84v13" stroke="#c79465" transform="rotate(180)"/>
+    <path d="M29.4 -84v13" stroke="#c79465" transform="rotate(180)"/>
+    <path d="M37.8 -84v13" stroke="#c79465" transform="rotate(180)"/>
+    <path d="M46.2 -84v13" stroke="#c79465" transform="rotate(180)"/>
+    <path d="M54.6 -84v13" stroke="#c79465" transform="rotate(180)"/>
+    <path d="M63.0 -84v13" stroke="#c79465" transform="rotate(180)"/>
+    <path d="M-63.0 -84v13" stroke="#c79465" transform="rotate(270)"/>
+    <path d="M-54.6 -84v13" stroke="#c79465" transform="rotate(270)"/>
+    <path d="M-46.2 -84v13" stroke="#c79465" transform="rotate(270)"/>
+    <path d="M-37.8 -84v13" stroke="#c79465" transform="rotate(270)"/>
+    <path d="M-29.4 -84v13" stroke="#c79465" transform="rotate(270)"/>
+    <path d="M-21.0 -84v13" stroke="#c79465" transform="rotate(270)"/>
+    <path d="M-12.6 -84v13" stroke="#c79465" transform="rotate(270)"/>
+    <path d="M-4.2 -84v13" stroke="#c79465" transform="rotate(270)"/>
+    <path d="M4.2 -84v13" stroke="#c79465" transform="rotate(270)"/>
+    <path d="M12.6 -84v13" stroke="#c79465" transform="rotate(270)"/>
+    <path d="M21.0 -84v13" stroke="#c79465" transform="rotate(270)"/>
+    <path d="M29.4 -84v13" stroke="#c79465" transform="rotate(270)"/>
+    <path d="M37.8 -84v13" stroke="#c79465" transform="rotate(270)"/>
+    <path d="M46.2 -84v13" stroke="#c79465" transform="rotate(270)"/>
+    <path d="M54.6 -84v13" stroke="#c79465" transform="rotate(270)"/>
+    <path d="M63.0 -84v13" stroke="#c79465" transform="rotate(270)"/>
+    </g>
+    <g fill="#273336" stroke="#a6adaa" stroke-width="1.3">
+      <circle cx="-75" cy="-75" r="3.3"/><circle cx="75" cy="-75" r="3.3"/>
+      <circle cx="-75" cy="75" r="3.3"/><circle cx="75" cy="75" r="3.3"/>
+    </g>
+  </g>
+
+  <path d="M171 111v57m217-57v57m-108-3v51" fill="none" stroke="#d59663" stroke-opacity=".8" stroke-dasharray="3 6"/>
+  <path d="M169 113 280 166 391 113v13L280 179 169 126z" fill="#313e42" stroke="#8a9999"/>
+  <path d="m171 119 109 52 109-52m-109 48v11" fill="none" stroke="#c98349" stroke-width="1.5"/>
+  <g transform="matrix(.88 .42 -.88 .42 280 112)">
+    <path d="M-59 -68H59L68 -59V59L59 68H-59L-68 59V-59Z" fill="url(#silicon-top)" stroke="#c2c4b5" stroke-width="1.8"/>
+    <path d="M-55 -63H55L63 -55V55L55 63H-55L-63 55V-55Z" fill="url(#metal-lines)" stroke="#36464a" stroke-width="1.05"/>
+    <path d="M-49 -55H49L55 -49V49L49 55H-49L-55 49V-49Z" fill="#27373d" stroke="#c58b5c" stroke-width="1.5"/>
+    <path d="M-48-45h70v60h-70zM29-45h16v60H29zM-48 23h93v15h-93z" fill="#273438" stroke="#839493" stroke-width="1.1"/>
+    <rect x="-44" y="-41" width="10" height="10" rx=".8" fill="#708086" stroke="#859397" stroke-width=".6"/>
+    <rect x="-30" y="-41" width="10" height="10" rx=".8" fill="#43545a" stroke="#859397" stroke-width=".6"/>
+    <rect x="-16" y="-41" width="10" height="10" rx=".8" fill="#865537" stroke="#d98a49" stroke-width=".6"/>
+    <rect x="-2" y="-41" width="10" height="10" rx=".8" fill="#708086" stroke="#859397" stroke-width=".6"/>
+    <rect x="12" y="-41" width="10" height="10" rx=".8" fill="#43545a" stroke="#859397" stroke-width=".6"/>
+    <rect x="-44" y="-27" width="10" height="10" rx=".8" fill="#43545a" stroke="#859397" stroke-width=".6"/>
+    <rect x="-30" y="-27" width="10" height="10" rx=".8" fill="#708086" stroke="#859397" stroke-width=".6"/>
+    <rect x="-16" y="-27" width="10" height="10" rx=".8" fill="#865537" stroke="#d98a49" stroke-width=".6"/>
+    <rect x="-2" y="-27" width="10" height="10" rx=".8" fill="#43545a" stroke="#859397" stroke-width=".6"/>
+    <rect x="12" y="-27" width="10" height="10" rx=".8" fill="#708086" stroke="#859397" stroke-width=".6"/>
+    <rect x="-44" y="-13" width="10" height="10" rx=".8" fill="#43545a" stroke="#859397" stroke-width=".6"/>
+    <rect x="-30" y="-13" width="10" height="10" rx=".8" fill="#43545a" stroke="#859397" stroke-width=".6"/>
+    <rect x="-16" y="-13" width="10" height="10" rx=".8" fill="#865537" stroke="#d98a49" stroke-width=".6"/>
+    <rect x="-2" y="-13" width="10" height="10" rx=".8" fill="#43545a" stroke="#859397" stroke-width=".6"/>
+    <rect x="12" y="-13" width="10" height="10" rx=".8" fill="#43545a" stroke="#859397" stroke-width=".6"/>
+    <rect x="-44" y="1" width="10" height="10" rx=".8" fill="#708086" stroke="#859397" stroke-width=".6"/>
+    <rect x="-30" y="1" width="10" height="10" rx=".8" fill="#43545a" stroke="#859397" stroke-width=".6"/>
+    <rect x="-16" y="1" width="10" height="10" rx=".8" fill="#865537" stroke="#d98a49" stroke-width=".6"/>
+    <rect x="-2" y="1" width="10" height="10" rx=".8" fill="#708086" stroke="#859397" stroke-width=".6"/>
+    <rect x="12" y="1" width="10" height="10" rx=".8" fill="#43545a" stroke="#859397" stroke-width=".6"/>
+    <path d="M34-38h6m-6 8h6m-6 8h6m-6 8h6m-6 8h6m-6 8h6m-6 8h6M-41 29h15m7 0h15m7 0h15m7 0h13" fill="none" stroke="#85a7a8" stroke-width="2.6"/>
+  </g>
+
+  <g fill="none" stroke="#a7b0ae" stroke-opacity=".77">
+    <path d="M140 57h55l31 26"/>
+    <path d="M403 163h24l20-35h77"/>
+    <path d="M119 287H91l-20 32H37"/>
+  </g>
+  <g fill="#d98a49">
+    <circle cx="226" cy="83" r="2.6"/><circle cx="403" cy="163" r="2.6"/><circle cx="119" cy="287" r="2.6"/>
+  </g>
+  <g fill="#c3ccca" font-family="monospace" font-size="12" letter-spacing="1">
+    <text x="47" y="61">COMPUTE DIE</text>
+    <text x="523" y="119" text-anchor="end">PACKAGE</text>
+    <text x="37" y="339">PCB</text>
+  </g>
+  <path d="M37 368h58m-58-4v8m14-8v8m14-8v8m15-8v8m15-8v8m373-8h56m-10-4v8m-18-8v8m-18-8v8" fill="none" stroke="#719092" stroke-opacity=".85"/>
+</svg>
