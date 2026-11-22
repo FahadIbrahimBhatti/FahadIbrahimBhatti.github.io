@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/favicon.svg?v=industrial-01" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=industrial-02">
+  <link rel="stylesheet" href="styles.css?v=industrial-03">
   <title>Muhammad Fahd Ibrahim Bhatti | Research</title>
 </head>
 <body id="top">
@@ -155,18 +155,18 @@
         <article class="project-card related-project" aria-labelledby="compilation-title">
           <div class="project-content">
             <p class="project-category metadata">Compilers &amp; embedded systems</p>
-            <h3 id="compilation-title">Neural-network compilation</h3>
-            <p>Ongoing work on lowering stateful neural networks to C and mapping their execution across CPUs and accelerators on heterogeneous embedded platforms.</p>
+            <h3 id="compilation-title">Ahead-of-time SNN compiler</h3>
+            <p>I’m developing an ahead-of-time compiler for spiking neural network (SNN) inference. It takes Neuromorphic Intermediate Representation (NIR) graphs as input and applies SNN-aware optimizations and lowering passes.</p>
             <dl class="project-facts">
-              <div><dt>Focus</dt><dd>Model lowering, code generation, execution mapping</dd></div>
+              <div><dt>Benchmark</dt><dd><strong>38×–158×</strong> inference speedup over SNN-MLIR in initial tests</dd></div>
             </dl>
           </div>
           <figure class="compilation-flow">
             <ol aria-label="Compilation workflow">
-              <li>Model</li>
+              <li>NIR graph</li>
+              <li>SNN-aware passes</li>
               <li>Lowering</li>
-              <li>C code</li>
-              <li>CPU + accelerator</li>
+              <li>Compiled inference</li>
             </ol>
             <figcaption>Conceptual workflow</figcaption>
           </figure>
