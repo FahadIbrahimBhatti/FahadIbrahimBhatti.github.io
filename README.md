@@ -8,6 +8,8 @@ The charcoal and gunmetal palette uses burnt orange for links and active states,
 
 The featured research panels stack on small screens. The SpikeDuet, VQ-LIC, and cerebellar decoding figures come from the supplied manuscripts and open at full size. The compilation diagram depicts the research workflow conceptually. The site defaults to dark mode and remembers an explicit theme choice.
 
+When updating a stylesheet, script, or icon, change its `?v=` value in `index.html` so returning visitors load the new file with the new page.
+
 ## Update or publish on GitHub Pages
 
 1. Edit `index.html` for the biography, projects, publications, and contact information. Replace `cv.pdf` when the public CV changes. Keep both the stylesheet and `assets/` at their current relative paths.
