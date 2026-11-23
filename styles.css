@@ -408,10 +408,12 @@ h1 {
 .affiliation dt { color: var(--muted); }
 .affiliation dd { font-size: .875rem; font-weight: 500; }
 
-.featured-projects, .related-projects { display: grid; gap: 1rem; }
-.related-projects { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 1rem; }
+.research-projects { display: grid; gap: 1rem; }
 
 .project-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+  align-items: center;
   min-width: 0;
   border: 1px solid var(--line);
   background: var(--surface);
@@ -420,13 +422,7 @@ h1 {
 
 .project-card:hover, .project-card:focus-within { border-color: var(--accent); }
 
-.featured-project {
-  display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
-  align-items: center;
-}
-
-.project-content { padding: clamp(1.1rem, 2.5vw, 1.85rem); }
+.project-content, .project-figure { padding: clamp(1.1rem, 2.5vw, 1.85rem); }
 .project-category { color: var(--technical); text-transform: uppercase; letter-spacing: .025em; }
 .project-content h3 { font-size: clamp(1.3rem, 2.35vw, 1.5rem); margin-block: .4rem .65rem; }
 .project-content > p:not(.project-category) { color: var(--muted); }
@@ -457,16 +453,11 @@ h1 {
 
 .project-links a:hover, .pub-links a:hover, .contact-email:hover { color: var(--accent-hover); }
 
-.project-figure, .compilation-flow {
-  padding: 0 clamp(1.1rem, 2.5vw, 1.85rem) clamp(1.1rem, 2.5vw, 1.85rem);
-}
-
-.featured-project .project-figure { padding-top: clamp(1.1rem, 2.5vw, 1.85rem); }
+.figure-frame, .compilation-flow ol { min-height: 13rem; }
 
 .figure-frame {
   display: grid;
   place-items: center;
-  min-height: 10rem;
   padding: clamp(.55rem, 1.35vw, 1rem);
   border: 1px solid var(--line);
   background: #fff;
@@ -475,10 +466,9 @@ h1 {
 
 .figure-frame:hover { border-color: var(--accent); }
 .figure-frame img { display: block; width: 100%; height: auto; }
-.figure-frame-codec img { max-width: 21rem; }
-.figure-frame-small { min-height: 0; }
+.figure-frame-codec img { max-width: 19rem; }
 
-.project-figure figcaption, .compilation-flow figcaption {
+.project-figure figcaption {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -489,19 +479,12 @@ h1 {
 
 .project-figure figcaption span { color: var(--technical); }
 
-.related-project {
-  display: flex;
-  flex-direction: column;
-}
-
-.related-project figure { margin-top: auto; }
-
 .compilation-flow { container-type: inline-size; }
 
 .compilation-flow ol {
   display: grid;
   grid-template-columns: minmax(0, .8fr) minmax(0, 1fr) minmax(0, .85fr) minmax(0, 1.35fr);
-  align-items: stretch;
+  align-content: center;
   gap: .7rem;
   list-style: none;
   padding: .8rem;
@@ -660,12 +643,12 @@ h1 {
   .focus-strip { display: grid; gap: .45rem; }
   .focus-strip ul { gap: .2rem .8rem; }
 
-  .about-layout, .featured-project, .related-projects, .footer-layout {
+  .about-layout, .project-card, .footer-layout {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .featured-project .project-figure { padding-top: 0; }
-  .figure-frame { min-height: 0; }
+  .project-figure { padding-top: 0; }
+  .figure-frame, .compilation-flow ol { min-height: 0; }
   .footer-layout { gap: .7rem; }
 }
 

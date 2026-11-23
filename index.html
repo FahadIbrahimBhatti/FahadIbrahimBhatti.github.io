@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/favicon.svg?v=industrial-01" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=industrial-03">
+  <link rel="stylesheet" href="styles.css?v=industrial-04">
   <title>Muhammad Fahd Ibrahim Bhatti | Research</title>
 </head>
 <body id="top">
@@ -106,15 +106,15 @@
         <h2 id="research-title">Selected research</h2>
       </header>
 
-      <div class="featured-projects">
-        <article class="project-card featured-project" aria-labelledby="spikeduet-title">
+      <div class="research-projects">
+        <article class="project-card" aria-labelledby="spikeduet-title">
           <div class="project-content">
             <p class="project-category metadata">Neuromorphic computing</p>
             <h3 id="spikeduet-title">SpikeDuet</h3>
-            <p>CPU–accelerator co-execution for sparse spiking neural networks on commodity microcontrollers. The deployment flow combines hardware-calibrated engine selection, neuron reordering, and asynchronous scheduling.</p>
+            <p>A snnTorch-to-C deployment flow for sparse spiking neural networks on a commodity microcontroller. It selects the execution engine for each layer, reorders co-active neurons, and overlaps CPU and accelerator computation.</p>
             <dl class="project-facts">
               <div><dt>Platform</dt><dd>EFR32MG24 · Cortex-M33 + MVP</dd></div>
-              <div><dt>Measured</dt><dd>1.27–1.87× speedup on five network configurations</dd></div>
+              <div><dt>Measured</dt><dd><strong>1.27–1.87×</strong> speedup and <strong>11–34%</strong> less energy per inference than optimized sparse Cortex-M33 across five accelerated configurations</dd></div>
             </dl>
             <div class="project-links">
               <a href="https://arxiv.org/abs/2610.24677" aria-label="SpikeDuet paper on arXiv">Paper</a>
@@ -122,21 +122,21 @@
             </div>
           </div>
           <figure class="project-figure">
-            <a class="figure-frame figure-frame-wide" href="assets/spikeduet-execution.webp">
+            <a class="figure-frame" href="assets/spikeduet-execution.webp">
               <img src="assets/spikeduet-execution.webp" width="978" height="312" loading="lazy" alt="SpikeDuet Figure 1b–c at full size. Comparison of sparse Cortex-M33, dense MVP, and range-sparse MVP execution, alongside the MCU memory layout.">
             </a>
             <figcaption>Execution modes and memory organization <span>Figure 1b–c</span></figcaption>
           </figure>
         </article>
 
-        <article class="project-card featured-project" aria-labelledby="vq-lic-title">
+        <article class="project-card" aria-labelledby="vq-lic-title">
           <div class="project-content">
             <p class="project-category metadata">FPGA acceleration</p>
             <h3 id="vq-lic-title">VQ-LIC</h3>
             <p>Hardware-aware learned image compression on a resource-constrained FPGA. The INT8 encoder reuses its pointwise engine for vector quantization, while a larger cloud decoder reconstructs the image.</p>
             <dl class="project-facts">
-              <div><dt>Platform</dt><dd>Zynq-7020 FPGA · INT8 RTL encoder</dd></div>
-              <div><dt>Measured</dt><dd>64 GOP/s encoder throughput at 100 MHz</dd></div>
+              <div><dt>Platform</dt><dd>Zynq-7020 FPGA · INT8 · 220 DSPs</dd></div>
+              <div><dt>Measured</dt><dd><strong>47.98 frames/s at 720p</strong> for the complete edge pipeline on silicon</dd></div>
             </dl>
             <div class="project-links">
               <a href="https://arxiv.org/abs/2609.29727" aria-label="VQ-LIC paper on arXiv">Paper</a>
@@ -149,43 +149,43 @@
             <figcaption>End-to-end VQ-LIC codec <span>Figure 1</span></figcaption>
           </figure>
         </article>
-      </div>
 
-      <div class="related-projects">
-        <article class="project-card related-project" aria-labelledby="compilation-title">
+        <article class="project-card" aria-labelledby="compilation-title">
           <div class="project-content">
             <p class="project-category metadata">Compilers &amp; embedded systems</p>
             <h3 id="compilation-title">Ahead-of-time SNN compiler</h3>
-            <p>I’m developing an ahead-of-time compiler for spiking neural network (SNN) inference. It takes Neuromorphic Intermediate Representation (NIR) graphs as input and applies SNN-aware optimizations and lowering passes.</p>
+            <p>I’m developing an ahead-of-time compiler that lowers Neuromorphic Intermediate Representation (NIR) graphs to C for stateful spiking neural network inference. Its event-driven kernels skip inactive inputs during synaptic accumulation.</p>
             <dl class="project-facts">
-              <div><dt>Benchmark</dt><dd><strong>38×–158×</strong> inference speedup over SNN-MLIR in initial tests</dd></div>
+              <div><dt>Targets</dt><dd>Portable C · EFR32 CPU/MVP</dd></div>
+              <div><dt>Benchmark</dt><dd><strong>134.6×</strong> inference speedup over SNN-MLIR on the Oxford workload in a preliminary single-core x86-64 test</dd></div>
             </dl>
           </div>
-          <figure class="compilation-flow">
+          <figure class="project-figure compilation-flow">
             <ol aria-label="Compilation workflow">
               <li>NIR graph</li>
-              <li>SNN-aware passes</li>
               <li>Lowering</li>
-              <li>Compiled inference</li>
+              <li>Event-driven kernels</li>
+              <li>Generated C</li>
             </ol>
-            <figcaption>Conceptual workflow</figcaption>
+            <figcaption>Ahead-of-time compilation workflow</figcaption>
           </figure>
         </article>
 
-        <article class="project-card related-project" aria-labelledby="decoding-title">
+        <article class="project-card" aria-labelledby="decoding-title">
           <div class="project-content">
             <p class="project-category metadata">Biomedical machine learning</p>
             <h3 id="decoding-title">Cerebellar motor decoding</h3>
-            <p>Decoding motor activity from single-channel cerebellar local field potentials using time–frequency features and compact machine-learning models.</p>
+            <p>Spectrogram features from a single channel of cerebellar Purkinje-layer local field potentials distinguish movement from rest during a mouse forepaw task.</p>
             <dl class="project-facts">
-              <div><dt>Platform</dt><dd>Single-channel LFP · Signal processing and ML</dd></div>
+              <div><dt>Method</dt><dd>Short-time Fourier transform · Compact classifiers</dd></div>
+              <div><dt>Measured</dt><dd>Up to <strong>99.7% accuracy</strong> for movement versus rest with four-second windows</dd></div>
             </dl>
             <div class="project-links">
               <a href="#pub-embc">Publication details</a>
             </div>
           </div>
           <figure class="project-figure">
-            <a class="figure-frame figure-frame-small" href="assets/cerebellar-decoding.webp">
+            <a class="figure-frame" href="assets/cerebellar-decoding.webp">
               <img src="assets/cerebellar-decoding.webp" width="1080" height="386" loading="lazy" alt="Cerebellar decoding Figure 2 excerpt at full size. LFP preprocessing produces spectrogram features, and rotary encoder signals supply movement labels for the classifier.">
             </a>
             <figcaption>Signal processing and classification <span>Figure 2 excerpt</span></figcaption>
